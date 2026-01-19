@@ -544,3 +544,214 @@
     bottom: 20px;
   }
 }
+
+/* Removed Ingredients Section */
+.dish-removed-ingredients {
+  margin-top: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+  border-radius: 12px;
+  border-left: 4px solid #ef5350;
+}
+
+.removed-section-title {
+  color: #c62828 !important;
+  border-bottom-color: #ffcdd2 !important;
+}
+
+.removed-section-title .section-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #d32f2f;
+  margin-top: 8px;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.removed-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.removed-ingredient-item {
+  background: white !important;
+  opacity: 0.8;
+  border: 2px solid #ffcdd2 !important;
+  position: relative;
+  padding-right: 80px !important;
+}
+
+.removed-ingredient-item .ingredient-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.btn-restore-ingredient {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-restore-ingredient:hover {
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-restore-ingredient:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Mobile responsive for removed section */
+@media (max-width: 768px) {
+  .removed-ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .removed-ingredient-item {
+    padding-right: 70px !important;
+  }
+  
+  .btn-restore-ingredient {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Removed materials within store cards */
+.removed-materials-in-store {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px dashed #ffcdd2;
+}
+
+.removed-materials-in-store h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d32f2f;
+  margin: 0 0 12px 0;
+}
+
+.removed-materials-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.removed-material-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #ffebee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.removed-material-item:last-child {
+  border-bottom: none;
+}
+
+.btn-restore-small {
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+
+.btn-restore-small:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.btn-restore-small:active {
+  transform: scale(0.95);
+}
+
+.removed-only-store {
+  opacity: 0.8;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .removed-material-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .btn-restore-small {
+    align-self: flex-end;
+  }
+}
+
+/* Already have materials within store cards */
+.already-have-materials-in-store {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px dashed #c8e6c9;
+}
+
+.already-have-materials-in-store h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin: 0 0 12px 0;
+}
+
+.already-have-materials-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.already-have-material-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #e8f5e9;
+  font-size: 0.95rem;
+}
+
+.already-have-material-item:last-child {
+  border-bottom: none;
+}
+
+.no-active-items {
+  opacity: 0.85;
+}
+
+.no-items-message {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .already-have-materials-in-store,
+  .removed-materials-in-store {
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  
+  .already-have-materials-in-store h5,
+  .removed-materials-in-store h5 {
+    font-size: 0.85rem;
+  }
+}

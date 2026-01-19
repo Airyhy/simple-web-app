@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>Yuan & Yuan Dish - Materials</title>
     <link
       rel="stylesheet"
@@ -23,83 +26,58 @@
       </div>
     </header>
 
-    <main class="container">
-      <section class="card">
-        <div class="materials-toolbar">
-          <div>
-            <h2>材料清单 / Materials Catalog</h2>
-            <p class="helper">所有材料均与菜谱共享同一数据 / Shared data with dish pages.</p>
-            <div class="store-legend">
-              <span class="legend-item">
-                <svg width="24" height="24" style="flex-shrink: 0;">
-                  <circle cx="12" cy="12" r="11" fill="#00674f"/>
-                  <text x="12" y="16" font-size="10" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">WF</text>
-                </svg>
-                Whole Foods / 全食超市
-              </span>
-              <span class="legend-item">
-                <svg width="24" height="24" style="flex-shrink: 0;">
-                  <circle cx="12" cy="12" r="11" fill="#e31837"/>
-                  <text x="12" y="17" font-size="12" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">S</text>
-                </svg>
-                Safeway / 西夫韦
-              </span>
-              <span class="legend-item">
-                <svg width="24" height="24" style="flex-shrink: 0;">
-                  <rect width="24" height="24" rx="12" fill="#ff9500"/>
-                  <text x="12" y="17" font-size="10" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">99</text>
-                </svg>
-                Ranch 99 / 大华超市
-              </span>
-              <span class="legend-item">
-                <svg width="24" height="24" style="flex-shrink: 0;">
-                  <circle cx="12" cy="12" r="11" fill="#007A87"/>
-                  <text x="12" y="17" font-size="10" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">TJ</text>
-                </svg>
-                Trader Joe's / 乔氏超市
-              </span>
-            </div>
+    <main class="container materials-main">
+      <div class="materials-layout">
+        <!-- Left Sidebar Navigation -->
+        <nav class="materials-sidebar">
+          <div class="sidebar-header">Status Filter</div>
+          <a href="#all" class="sidebar-link active" data-status="all">
+            <span class="sidebar-icon">📋</span>
+            <span class="sidebar-text">All Items</span>
+          </a>
+          <a href="#need-to-buy" class="sidebar-link" data-status="available">
+            <span class="sidebar-icon">🛒</span>
+            <span class="sidebar-text">Need to Buy</span>
+          </a>
+          <a href="#already-have" class="sidebar-link" data-status="have">
+            <span class="sidebar-icon">🏠</span>
+            <span class="sidebar-text">Already Have</span>
+          </a>
+          <a href="#removed" class="sidebar-link" data-status="removed">
+            <span class="sidebar-icon">🗑️</span>
+            <span class="sidebar-text">Removed</span>
+          </a>
+          <div class="sidebar-divider"></div>
+          <div class="sidebar-header">Store Filter</div>
+          <div class="sidebar-filters" id="store-filter">
+            <button class="sidebar-filter active" data-store="all">
+              <span>🏪</span>
+              <span>All</span>
+            </button>
+            <button class="sidebar-filter" data-store="Whole Foods">
+              <span style="background: #00674f; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">WF</span>
+              <span>WF</span>
+            </button>
+            <button class="sidebar-filter" data-store="Safeway">
+              <span style="background: #e31837; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">S</span>
+              <span>Safeway</span>
+            </button>
+            <button class="sidebar-filter" data-store="Ranch99">
+              <span style="background: #ff9500; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">99</span>
+              <span>Ranch 99</span>
+            </button>
+            <button class="sidebar-filter" data-store="Trader Joe's">
+              <span style="background: #007A87; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">TJ</span>
+              <span>Trader Joe's</span>
+            </button>
           </div>
-          <div class="materials-filter">
-            <label>门店 / Store</label>
-            <div class="store-buttons" id="store-filter">
-              <button class="store-button active" data-store="all">
-                <span class="store-button-icon">🏪</span>
-                <span class="store-button-text">全部 / All</span>
-              </button>
-              <button class="store-button" data-store="Whole Foods">
-                <svg width="20" height="20" style="flex-shrink: 0;">
-                  <circle cx="10" cy="10" r="9" fill="#00674f"/>
-                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">WF</text>
-                </svg>
-                <span class="store-button-text">Whole Foods</span>
-              </button>
-              <button class="store-button" data-store="Safeway">
-                <svg width="20" height="20" style="flex-shrink: 0;">
-                  <circle cx="10" cy="10" r="9" fill="#e31837"/>
-                  <text x="10" y="14" font-size="10" font-weight="700" fill="white" text-anchor="middle">S</text>
-                </svg>
-                <span class="store-button-text">Safeway</span>
-              </button>
-              <button class="store-button" data-store="Ranch99">
-                <svg width="20" height="20" style="flex-shrink: 0;">
-                  <rect width="20" height="20" rx="10" fill="#ff9500"/>
-                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">99</text>
-                </svg>
-                <span class="store-button-text">Ranch 99</span>
-              </button>
-              <button class="store-button" data-store="Trader Joe's">
-                <svg width="20" height="20" style="flex-shrink: 0;">
-                  <circle cx="10" cy="10" r="9" fill="#007A87"/>
-                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">TJ</text>
-                </svg>
-                <span class="store-button-text">Trader Joe's</span>
-              </button>
-            </div>
-          </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="materials-content">
+          <div id="materials-grid" class="modern-materials-grid"></div>
         </div>
-        <div id="materials-grid" class="materials-grid"></div>
-      </section>
+      </div>
 
       <footer class="attribution">
         <p>
