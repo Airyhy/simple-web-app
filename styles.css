@@ -549,3 +549,260 @@ button#view-dish {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Mobile: phones (up to 768px) */
+@media (max-width: 768px) {
+  /* Container padding */
+  .container {
+    padding: 12px;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 20px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Navigation */
+  .top-nav {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Dish gallery - single column on mobile */
+  .dish-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dish-card {
+    max-width: 100%;
+  }
+
+  .dish-card img {
+    height: 200px;
+  }
+
+  /* Buttons - larger touch targets */
+  button {
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .primary-actions {
+    flex-direction: column;
+  }
+
+  .primary-actions button {
+    width: 100%;
+  }
+
+  .dinner-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dinner-actions button {
+    width: 100%;
+  }
+
+  /* Steps list */
+  .step-section {
+    padding: 12px;
+  }
+
+  .step-section h3 {
+    font-size: 1rem;
+  }
+
+  .step-section li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Materials by store */
+  .materials-by-store {
+    gap: 12px;
+  }
+
+  .store-card {
+    padding: 12px;
+  }
+
+  .store-card h4 {
+    font-size: 1rem;
+  }
+
+  .store-card li {
+    font-size: 0.9rem;
+  }
+
+  /* Materials grid */
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .material-card {
+    max-width: 100%;
+  }
+
+  /* Store filter buttons */
+  .materials-filter {
+    width: 100%;
+  }
+
+  .store-buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .store-button {
+    flex: 1 1 calc(50% - 4px);
+    min-width: calc(50% - 4px);
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+
+  /* Dinner planning section */
+  .dinner-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #selected-dishes {
+    font-size: 0.9rem;
+  }
+
+  /* Attribution */
+  .attribution {
+    font-size: 0.75rem;
+    padding: 12px;
+  }
+}
+
+/* Tablet: medium screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+
+  .dish-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile: very small phones (up to 375px) */
+@media (max-width: 375px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .store-button {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .dish-card img {
+    height: 180px;
+  }
+}
+
+/* Landscape mode on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    margin-bottom: 12px;
+  }
+
+  .dish-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets for touch screens */
+  button,
+  .nav-link,
+  .dish-card,
+  .material-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(139, 111, 71, 0.2);
+  }
+
+  /* Remove hover effects on touch devices */
+  button:hover,
+  .dish-card:hover,
+  .material-card:hover {
+    transform: none;
+  }
+
+  /* Active states for touch feedback */
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .dish-card:active,
+  .material-card:active {
+    opacity: 0.9;
+  }
+}
