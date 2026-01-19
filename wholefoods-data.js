@@ -230,4 +230,284 @@ const WHOLEFOODS_MATERIALS = [
     unit: "12 oz",
     image: "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=800&h=600&fit=crop"
   },
+  {
+    id: "bell-peppers",
+    nameCn: "彩椒",
+    nameEn: "Bell Peppers",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 5.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cucumber",
+    nameCn: "黄瓜",
+    nameEn: "English Cucumber",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 2.49,
+    unit: "each",
+    image: "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "mushrooms",
+    nameCn: "蘑菇",
+    nameEn: "White Mushrooms",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 4.99,
+    unit: "8 oz",
+    image: "https://images.unsplash.com/photo-1565961351-3a5b4c4286b9?w=800&h=600&fit=crop"
+  },
+  {
+    id: "avocado",
+    nameCn: "牛油果",
+    nameEn: "Hass Avocados",
+    brand: "Fresh Produce",
+    store: "Whole Foods",
+    price: 1.99,
+    unit: "each",
+    image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=800&h=600&fit=crop"
+  },
+  {
+    id: "zucchini",
+    nameCn: "西葫芦",
+    nameEn: "Zucchini",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 2.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1632236764728-68ec11b1e152?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cauliflower",
+    nameCn: "花椰菜",
+    nameEn: "Cauliflower",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 4.99,
+    unit: "each",
+    image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?w=800&h=600&fit=crop"
+  },
+  {
+    id: "kale",
+    nameCn: "羽衣甘蓝",
+    nameEn: "Organic Kale",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 3.49,
+    unit: "1 bunch",
+    image: "https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=800&h=600&fit=crop"
+  },
+  {
+    id: "sweet-potato",
+    nameCn: "红薯",
+    nameEn: "Sweet Potatoes",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 2.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "asparagus",
+    nameCn: "芦笋",
+    nameEn: "Asparagus",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 5.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1627743175994-46e1f1ced8b4?w=800&h=600&fit=crop"
+  },
+  {
+    id: "blueberries",
+    nameCn: "蓝莓",
+    nameEn: "Organic Blueberries",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 6.99,
+    unit: "6 oz",
+    image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "strawberries",
+    nameCn: "草莓",
+    nameEn: "Organic Strawberries",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 5.99,
+    unit: "1 lb",
+    image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=800&h=600&fit=crop"
+  },
+  {
+    id: "bananas",
+    nameCn: "香蕉",
+    nameEn: "Organic Bananas",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 0.79,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=800&h=600&fit=crop"
+  },
+  {
+    id: "apples",
+    nameCn: "苹果",
+    nameEn: "Honeycrisp Apples",
+    brand: "Organic Produce",
+    store: "Whole Foods",
+    price: 3.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&h=600&fit=crop"
+  },
+  {
+    id: "oranges",
+    nameCn: "橙子",
+    nameEn: "Navel Oranges",
+    brand: "Fresh Produce",
+    store: "Whole Foods",
+    price: 4.99,
+    unit: "3 lb bag",
+    image: "https://images.unsplash.com/photo-1547514701-42782101795e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "ground-turkey",
+    nameCn: "火鸡肉末",
+    nameEn: "Ground Turkey",
+    brand: "Organic Prairie",
+    store: "Whole Foods",
+    price: 7.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1588347818036-8fc8d30e4e07?w=800&h=600&fit=crop"
+  },
+  {
+    id: "pork-chops",
+    nameCn: "猪排",
+    nameEn: "Pork Chops",
+    brand: "Whole Foods Market",
+    store: "Whole Foods",
+    price: 8.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?w=800&h=600&fit=crop"
+  },
+  {
+    id: "shrimp",
+    nameCn: "虾",
+    nameEn: "Wild Caught Shrimp",
+    brand: "365 by Whole Foods",
+    store: "Whole Foods",
+    price: 12.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cream-cheese",
+    nameCn: "奶油奶酪",
+    nameEn: "Cream Cheese",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 3.99,
+    unit: "8 oz",
+    image: "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "sour-cream",
+    nameCn: "酸奶油",
+    nameEn: "Sour Cream",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 3.49,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1629798787078-0c59e88aeb73?w=800&h=600&fit=crop"
+  },
+  {
+    id: "mozzarella",
+    nameCn: "马苏里拉奶酪",
+    nameEn: "Fresh Mozzarella",
+    brand: "BelGioioso",
+    store: "Whole Foods",
+    price: 6.99,
+    unit: "8 oz",
+    image: "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&h=600&fit=crop"
+  },
+  {
+    id: "parmesan",
+    nameCn: "帕玛森奶酪",
+    nameEn: "Parmesan Cheese",
+    brand: "Whole Foods Market",
+    store: "Whole Foods",
+    price: 12.99,
+    unit: "per lb",
+    image: "https://images.unsplash.com/photo-1589881133595-c68e81e9fa31?w=800&h=600&fit=crop"
+  },
+  {
+    id: "bread-sourdough",
+    nameCn: "酸面包",
+    nameEn: "Sourdough Bread",
+    brand: "Whole Foods Bakery",
+    store: "Whole Foods",
+    price: 4.99,
+    unit: "1 loaf",
+    image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc4c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "bagels",
+    nameCn: "贝果",
+    nameEn: "Plain Bagels",
+    brand: "365 by Whole Foods",
+    store: "Whole Foods",
+    price: 4.49,
+    unit: "6 ct",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tortillas",
+    nameCn: "玉米饼",
+    nameEn: "Flour Tortillas",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 3.99,
+    unit: "10 ct",
+    image: "https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=800&h=600&fit=crop"
+  },
+  {
+    id: "hummus-wf",
+    nameCn: "鹰嘴豆泥",
+    nameEn: "Classic Hummus",
+    brand: "365 by Whole Foods",
+    store: "Whole Foods",
+    price: 3.99,
+    unit: "10 oz",
+    image: "https://images.unsplash.com/photo-1600699097161-30465f9c6c36?w=800&h=600&fit=crop"
+  },
+  {
+    id: "guac-wf",
+    nameCn: "鳄梨酱",
+    nameEn: "Fresh Guacamole",
+    brand: "Whole Foods Market",
+    store: "Whole Foods",
+    price: 5.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "ice-cream",
+    nameCn: "冰淇淋",
+    nameEn: "Vanilla Ice Cream",
+    brand: "365 Organic",
+    store: "Whole Foods",
+    price: 6.99,
+    unit: "1 pint",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&h=600&fit=crop"
+  },
+  {
+    id: "frozen-pizza",
+    nameCn: "冷冻披萨",
+    nameEn: "Margherita Pizza",
+    brand: "365 by Whole Foods",
+    store: "Whole Foods",
+    price: 7.99,
+    unit: "each",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=600&fit=crop"
+  },
 ];

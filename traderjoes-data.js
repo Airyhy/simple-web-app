@@ -199,5 +199,295 @@ const TRADERJOES_MATERIALS = [
     price: 3.99,
     unit: "300 g",
     image: "https://images.openfoodfacts.org/images/products/762/221/044/9283/front_en.605.400.jpg"
-  }
+  },
+  {
+    id: "everything-bagel",
+    nameCn: "什锦贝果调味料",
+    nameEn: "Everything But The Bagel Seasoning",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "2.3 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cauliflower-gnocchi",
+    nameCn: "花椰菜意式面疙瘩",
+    nameEn: "Cauliflower Gnocchi",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.49,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop"
+  },
+  {
+    id: "mandarin-chicken",
+    nameCn: "橘子鸡",
+    nameEn: "Mandarin Orange Chicken",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 6.99,
+    unit: "22 oz",
+    image: "https://images.unsplash.com/photo-1588347818036-8fc8d30e4e07?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cookie-butter",
+    nameCn: "饼干酱",
+    nameEn: "Speculoos Cookie Butter",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.99,
+    unit: "14.1 oz",
+    image: "https://images.unsplash.com/photo-1588690610253-59d52b1c0c0f?w=800&h=600&fit=crop"
+  },
+  {
+    id: "elote-chips",
+    nameCn: "墨西哥玉米片",
+    nameEn: "Elote Corn Chip Dippers",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=800&h=600&fit=crop"
+  },
+  {
+    id: "organic-popcorn",
+    nameCn: "有机爆米花",
+    nameEn: "Organic Popcorn with Olive Oil",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "8 oz",
+    image: "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-joe-joes",
+    nameCn: "乔乔曲奇",
+    nameEn: "Joe-Joe's Cookies",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.49,
+    unit: "13.4 oz",
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-hold-the-cone",
+    nameCn: "迷你冰淇淋甜筒",
+    nameEn: "Hold the Cone! Mini Ice Cream Cones",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.49,
+    unit: "7.5 oz",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-frozen-berries",
+    nameCn: "冷冻混合莓果",
+    nameEn: "Frozen Mixed Berry Blend",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-bruschetta",
+    nameCn: "意式烤面包酱",
+    nameEn: "Bruschetta Sauce",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1572695157279-8f57e194940c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-salsa-verde",
+    nameCn: "绿莎莎酱",
+    nameEn: "Salsa Verde",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-sriracha",
+    nameCn: "是拉差辣酱",
+    nameEn: "Sriracha Sauce",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.49,
+    unit: "9 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-green-dragon",
+    nameCn: "青龙辣酱",
+    nameEn: "Green Dragon Hot Sauce",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "7 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-frozen-tamales",
+    nameCn: "冷冻塔马利",
+    nameEn: "Chicken Tamales",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.99,
+    unit: "18 oz",
+    image: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-soup-dumplings",
+    nameCn: "小笼包",
+    nameEn: "Pork Soup Dumplings (Xiao Long Bao)",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.49,
+    unit: "6 ct",
+    image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-gyoza",
+    nameCn: "煎饺",
+    nameEn: "Chicken Gyoza Potstickers",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-fried-rice",
+    nameCn: "冷冻炒饭",
+    nameEn: "Vegetable Fried Rice",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.49,
+    unit: "18 oz",
+    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-pad-thai",
+    nameCn: "泰式炒河粉",
+    nameEn: "Thai Vegetable Pad Thai",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "9 oz",
+    image: "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-naan",
+    nameCn: "印度馕饼",
+    nameEn: "Garlic Naan",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "4 ct",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-pita",
+    nameCn: "口袋面包",
+    nameEn: "Whole Wheat Pita Bread",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.49,
+    unit: "6 ct",
+    image: "https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-flatbread",
+    nameCn: "薄饼",
+    nameEn: "Mediterranean Flatbread",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.49,
+    unit: "4 ct",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-butter-chicken",
+    nameCn: "印度黄油鸡",
+    nameEn: "Butter Chicken with Basmati Rice",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.99,
+    unit: "18 oz",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-tikka-masala",
+    nameCn: "印度咖喱鸡",
+    nameEn: "Chicken Tikka Masala",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.99,
+    unit: "10.6 oz",
+    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-hash-browns",
+    nameCn: "薯饼",
+    nameEn: "Hash Browns",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1618897659164-3d5a08bfa8aa?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-mac-cheese",
+    nameCn: "奶酪通心粉",
+    nameEn: "Mac & Cheese",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "20 oz",
+    image: "https://images.unsplash.com/photo-1639744091413-8aa8f2f5c11f?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-veggie-burger",
+    nameCn: "素食汉堡",
+    nameEn: "Hi-Protein Veggie Burgers",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 4.49,
+    unit: "4 ct",
+    image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-falafel",
+    nameCn: "中东豆饼",
+    nameEn: "Falafel Mix",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 2.99,
+    unit: "12 oz",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-olive-oil",
+    nameCn: "特级初榨橄榄油",
+    nameEn: "Extra Virgin Olive Oil",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 9.99,
+    unit: "16.9 oz",
+    image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&h=600&fit=crop"
+  },
+  {
+    id: "tj-balsamic",
+    nameCn: "意大利黑醋",
+    nameEn: "Balsamic Glaze",
+    brand: "Trader Joe's",
+    store: "Trader Joe's",
+    price: 3.99,
+    unit: "8.5 oz",
+    image: "https://images.unsplash.com/photo-1596040033229-a0b55ee0a8ec?w=800&h=600&fit=crop"
+  },
 ];

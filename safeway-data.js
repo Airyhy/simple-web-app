@@ -280,4 +280,314 @@ const SAFEWAY_MATERIALS = [
     unit: "13 oz",
     image: "https://images.openfoodfacts.org/images/products/317/468/017/0000/front_en.184.400.jpg"
   },
+  {
+    id: "canned-tomatoes",
+    nameCn: "番茄罐头",
+    nameEn: "Crushed Tomatoes",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "28 oz",
+    image: "https://images.unsplash.com/photo-1625757953933-59d44c8c89b3?w=800&h=600&fit=crop"
+  },
+  {
+    id: "chicken-stock",
+    nameCn: "鸡高汤",
+    nameEn: "Chicken Stock",
+    brand: "Swanson",
+    store: "Safeway",
+    price: 3.99,
+    unit: "32 oz",
+    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop"
+  },
+  {
+    id: "beef-broth",
+    nameCn: "牛肉汤",
+    nameEn: "Beef Broth",
+    brand: "Swanson",
+    store: "Safeway",
+    price: 3.99,
+    unit: "32 oz",
+    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop"
+  },
+  {
+    id: "vegetable-oil",
+    nameCn: "植物油",
+    nameEn: "Vegetable Oil",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 6.99,
+    unit: "48 oz",
+    image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&h=600&fit=crop"
+  },
+  {
+    id: "coconut-oil-sf",
+    nameCn: "椰子油",
+    nameEn: "Coconut Oil",
+    brand: "O Organics",
+    store: "Safeway",
+    price: 8.99,
+    unit: "14 oz",
+    image: "https://images.unsplash.com/photo-1518544866330-4e716499f800?w=800&h=600&fit=crop"
+  },
+  {
+    id: "vinegar-white",
+    nameCn: "白醋",
+    nameEn: "White Vinegar",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "32 oz",
+    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&h=600&fit=crop"
+  },
+  {
+    id: "balsamic",
+    nameCn: "黑醋",
+    nameEn: "Balsamic Vinegar",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 5.99,
+    unit: "16.9 oz",
+    image: "https://images.unsplash.com/photo-1596040033229-a0b55ee0a8ec?w=800&h=600&fit=crop"
+  },
+  {
+    id: "worcestershire",
+    nameCn: "伍斯特沙司",
+    nameEn: "Worcestershire Sauce",
+    brand: "Lea & Perrins",
+    store: "Safeway",
+    price: 4.99,
+    unit: "10 oz",
+    image: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=800&h=600&fit=crop"
+  },
+  {
+    id: "hot-sauce",
+    nameCn: "辣酱",
+    nameEn: "Hot Sauce",
+    brand: "Tabasco",
+    store: "Safeway",
+    price: 3.99,
+    unit: "5 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "bbq-sauce",
+    nameCn: "烧烤酱",
+    nameEn: "BBQ Sauce",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.49,
+    unit: "18 oz",
+    image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=800&h=600&fit=crop"
+  },
+  {
+    id: "ranch-dressing",
+    nameCn: "田园沙拉酱",
+    nameEn: "Ranch Dressing",
+    brand: "Hidden Valley",
+    store: "Safeway",
+    price: 4.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=800&h=600&fit=crop"
+  },
+  {
+    id: "italian-dressing",
+    nameCn: "意式沙拉酱",
+    nameEn: "Italian Dressing",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1596040033229-a0b55ee0a8ec?w=800&h=600&fit=crop"
+  },
+  {
+    id: "garlic-powder",
+    nameCn: "蒜粉",
+    nameEn: "Garlic Powder",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.49,
+    unit: "3 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "onion-powder",
+    nameCn: "洋葱粉",
+    nameEn: "Onion Powder",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.49,
+    unit: "3 oz",
+    image: "https://images.unsplash.com/photo-1596040033229-a0b55ee0a8ec?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cumin",
+    nameCn: "孜然粉",
+    nameEn: "Ground Cumin",
+    brand: "McCormick",
+    store: "Safeway",
+    price: 4.99,
+    unit: "1.5 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "chili-powder",
+    nameCn: "辣椒粉",
+    nameEn: "Chili Powder",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.99,
+    unit: "2.5 oz",
+    image: "https://images.unsplash.com/photo-1599909533872-c97725f38dc7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "cinnamon",
+    nameCn: "肉桂粉",
+    nameEn: "Ground Cinnamon",
+    brand: "McCormick",
+    store: "Safeway",
+    price: 5.99,
+    unit: "2.37 oz",
+    image: "https://images.unsplash.com/photo-1596040033229-a0b55ee0a8ec?w=800&h=600&fit=crop"
+  },
+  {
+    id: "brown-sugar",
+    nameCn: "红糖",
+    nameEn: "Brown Sugar",
+    brand: "C&H",
+    store: "Safeway",
+    price: 3.99,
+    unit: "2 lbs",
+    image: "https://images.unsplash.com/photo-1587228060-59e4ef64f5c5?w=800&h=600&fit=crop"
+  },
+  {
+    id: "powdered-sugar",
+    nameCn: "糖粉",
+    nameEn: "Powdered Sugar",
+    brand: "C&H",
+    store: "Safeway",
+    price: 3.49,
+    unit: "2 lbs",
+    image: "https://images.unsplash.com/photo-1587228060-59e4ef64f5c5?w=800&h=600&fit=crop"
+  },
+  {
+    id: "baking-soda",
+    nameCn: "小苏打",
+    nameEn: "Baking Soda",
+    brand: "Arm & Hammer",
+    store: "Safeway",
+    price: 1.99,
+    unit: "1 lb",
+    image: "https://images.unsplash.com/photo-1605976949808-e8a2bbd52d6f?w=800&h=600&fit=crop"
+  },
+  {
+    id: "yeast",
+    nameCn: "酵母",
+    nameEn: "Active Dry Yeast",
+    brand: "Fleischmann's",
+    store: "Safeway",
+    price: 5.99,
+    unit: "4 oz",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop"
+  },
+  {
+    id: "crackers-sf",
+    nameCn: "咸饼干",
+    nameEn: "Saltine Crackers",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&h=600&fit=crop"
+  },
+  {
+    id: "chips",
+    nameCn: "薯片",
+    nameEn: "Potato Chips",
+    brand: "Lay's",
+    store: "Safeway",
+    price: 4.99,
+    unit: "10 oz",
+    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=800&h=600&fit=crop"
+  },
+  {
+    id: "pretzels",
+    nameCn: "椒盐卷饼",
+    nameEn: "Pretzels",
+    brand: "Snyder's",
+    store: "Safeway",
+    price: 3.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1600490916193-f654f7c37764?w=800&h=600&fit=crop"
+  },
+  {
+    id: "popcorn",
+    nameCn: "爆米花",
+    nameEn: "Microwave Popcorn",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 4.49,
+    unit: "6 ct",
+    image: "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=800&h=600&fit=crop"
+  },
+  {
+    id: "juice-orange",
+    nameCn: "橙汁",
+    nameEn: "Orange Juice",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 5.99,
+    unit: "64 oz",
+    image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&h=600&fit=crop"
+  },
+  {
+    id: "soda",
+    nameCn: "汽水",
+    nameEn: "Cola",
+    brand: "Coca-Cola",
+    store: "Safeway",
+    price: 6.99,
+    unit: "12 pack",
+    image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=800&h=600&fit=crop"
+  },
+  {
+    id: "water-bottled",
+    nameCn: "瓶装水",
+    nameEn: "Bottled Water",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 4.99,
+    unit: "24 pack",
+    image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&h=600&fit=crop"
+  },
+  {
+    id: "frozen-peas",
+    nameCn: "冷冻豌豆",
+    nameEn: "Frozen Peas",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=800&h=600&fit=crop"
+  },
+  {
+    id: "frozen-corn",
+    nameCn: "冷冻玉米",
+    nameEn: "Frozen Sweet Corn",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&h=600&fit=crop"
+  },
+  {
+    id: "frozen-broccoli",
+    nameCn: "冷冻西兰花",
+    nameEn: "Frozen Broccoli Florets",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "16 oz",
+    image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?w=800&h=600&fit=crop"
+  },
 ];
