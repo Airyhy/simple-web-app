@@ -330,6 +330,22 @@ function initPage() {
     });
   }
 
+  // Mobile touch optimization
+  const addTouchOptimization = () => {
+    // Optimize all interactive elements for touch
+    document.querySelectorAll('.status-link, .store-link, .btn-add-material').forEach(el => {
+      el.style.touchAction = 'manipulation';
+      el.style.webkitTapHighlightColor = 'transparent';
+    });
+    
+    // Prevent double-tap zoom on inputs
+    document.querySelectorAll('input, select, textarea').forEach(el => {
+      el.style.fontSize = Math.max(16, parseFloat(getComputedStyle(el).fontSize)) + 'px';
+    });
+  };
+  
+  addTouchOptimization();
+  
   // Initialize with default view
   applyFilters();
 }
