@@ -1,195 +1,5 @@
-const DISHES = [
-  {
-    name: "麻婆豆腐 (Mapo Tofu)",
-    image: "assets/mapo-tofu.jpg",
-    tagline: "麻辣豆腐配猪肉末与花椒 / Spicy tofu with pork and Sichuan pepper.",
-    steps: {
-      preparation: [
-        "切1英寸豆腐块，入加盐沸水焯1分钟沥干 / Dice tofu into 1-inch cubes; blanch in salted water for 1 minute, then drain.",
-        "蒜、姜、葱切末备好 / Mince garlic, ginger, and scallion."
-      ],
-      main: [
-        "热油下蒜、姜、葱炒香，加入豆瓣酱炒出红油 / Sauté aromatics; stir in doubanjiang until the oil turns red.",
-        "加入猪肉末炒散至变色 / Add ground pork and cook until browned."
-      ],
-      side: [
-        "倒入高汤，下豆腐小火烧5分钟入味 / Pour in broth, add tofu, and simmer gently for 5 minutes."
-      ],
-      seasoning: [
-        "用水淀粉勾芡，撒花椒粉并淋红油 / Thicken with cornstarch slurry; finish with Sichuan pepper and chili oil."
-      ]
-    },
-    materials: {
-      "Whole Foods": [
-        "五花肉/猪肉末 Ground pork (1 lb)",
-        "蒜头 Garlic bulbs",
-        "生姜 Fresh ginger",
-        "青葱 Scallions",
-        "嫩豆腐 Soft tofu (2 blocks)"
-      ],
-      Costco: [
-        "玉米淀粉 Cornstarch",
-        "鸡汤 Chicken broth carton",
-        "菜籽油 Canola oil"
-      ],
-      Ranch99: [
-        "郫县豆瓣酱 Doubanjiang (spicy bean paste)",
-        "花椒 Sichuan peppercorns",
-        "红油 Chili oil"
-      ]
-    }
-  },
-  {
-    name: "宫保鸡丁 (Kung Pao Chicken)",
-    image: "assets/kung-pao-chicken.jpg",
-    tagline: "花生辣椒香炒鸡丁 / Kung pao chicken with peanuts and chilies.",
-    steps: {
-      preparation: [
-        "鸡丁用生抽、绍兴酒、淀粉腌制15分钟 / Marinate chicken with soy sauce, Shaoxing wine, and cornstarch for 15 minutes.",
-        "花生、干辣椒备用 / Prepare peanuts and dried chilies."
-      ],
-      main: [
-        "大火滑炒鸡丁至变色微焦，盛出 / Stir-fry chicken on high heat until browned; remove from pan."
-      ],
-      side: [
-        "干锅略炒花生与干辣椒，盛出备用 / Toast peanuts and dried chilies briefly; set aside."
-      ],
-      seasoning: [
-        "炒香蒜、姜、葱，加入调味汁收至发亮 / Cook garlic, ginger, and scallion; add sauce and reduce until glossy.",
-        "回锅鸡丁与花生快速翻匀 / Return chicken and peanuts; toss quickly to coat."
-      ]
-    },
-    materials: {
-      "Whole Foods": [
-        "鸡腿肉去骨 Boneless chicken thighs (2 lb)",
-        "蒜头 Garlic bulbs",
-        "青葱 Scallions"
-      ],
-      Costco: [
-        "烤花生 Roasted peanuts",
-        "酱油 Soy sauce",
-        "玉米淀粉 Cornstarch"
-      ],
-      Ranch99: [
-        "干辣椒 Dried chilies",
-        "陈醋 Chinese black vinegar",
-        "绍兴料酒 Shaoxing rice wine"
-      ]
-    }
-  },
-  {
-    name: "番茄炒蛋 (Tomato Egg Stir-Fry)",
-    image: "assets/tomato-egg.jpg",
-    tagline: "家常番茄炒蛋 / Classic tomato egg stir-fry.",
-    steps: {
-      preparation: [
-        "鸡蛋加少许盐与清水打散 / Beat eggs with a pinch of salt and a splash of water.",
-        "番茄切块，葱切末 / Chop tomatoes and scallions."
-      ],
-      main: [
-        "中火炒鸡蛋至刚凝固，盛出 / Scramble eggs over medium heat until just set; remove."
-      ],
-      side: [
-        "番茄加少许盐和糖炒至出汁 / Cook tomatoes with a pinch of salt and sugar until saucy."
-      ],
-      seasoning: [
-        "回锅鸡蛋轻轻翻拌 / Return eggs and gently fold to combine.",
-        "撒葱花，滴少许香油 / Finish with scallions and a drizzle of sesame oil."
-      ]
-    },
-    materials: {
-      "Whole Foods": [
-        "鸡蛋 Eggs (6)",
-        "番茄 Roma tomatoes (4)",
-        "青葱 Scallions"
-      ],
-      Costco: [
-        "菜籽油 Canola oil",
-        "白砂糖 Granulated sugar"
-      ],
-      Ranch99: [
-        "白胡椒粉 White pepper",
-        "生抽 Light soy sauce"
-      ]
-    }
-  },
-  {
-    name: "肉丸酱 (Meatball Paste)",
-    image: "assets/meatballs.jpg",
-    tagline: "番茄酱汁慢炖肉丸 / Savory meatballs simmered in tomato paste.",
-    steps: {
-      preparation: [
-        "肉馅与面包糠、鸡蛋、洋葱、蒜末、盐胡椒拌匀 / Combine ground meat with breadcrumbs, egg, onion, garlic, salt, and pepper.",
-        "搓成约1英寸肉丸，冷藏10分钟定型 / Form 1-inch meatballs; chill 10 minutes to set."
-      ],
-      main: [
-        "热油煎至表面金黄 / Sear in hot oil until browned on all sides."
-      ],
-      side: [
-        "番茄膏用高汤稀释备用 / Dilute tomato paste with broth for a simmering sauce."
-      ],
-      seasoning: [
-        "加入番茄汁小火焖12-15分钟 / Simmer in tomato sauce for 12-15 minutes.",
-        "撒香草并调味收尾 / Finish with herbs and adjust seasoning."
-      ]
-    },
-    materials: {
-      "Whole Foods": [
-        "牛肉馅 Ground beef (1.5 lb)",
-        "鸡蛋 Egg (1)",
-        "欧芹 Fresh parsley",
-        "蒜头 Garlic bulbs"
-      ],
-      Costco: [
-        "番茄膏 Tomato paste",
-        "面包糠 Breadcrumbs",
-        "橄榄油 Olive oil"
-      ],
-      Ranch99: [
-        "牛至 Dried oregano",
-        "辣椒碎 Chili flakes"
-      ]
-    }
-  },
-  {
-    name: "香煎鸡胸 (Pan-Fried Chicken Breast)",
-    image: "assets/pan-fried-chicken-breast.jpg",
-    tagline: "金黄外皮多汁鸡胸 / Juicy chicken with a golden crust.",
-    steps: {
-      preparation: [
-        "擦干水分，敲至约1/2英寸厚 / Pat chicken dry and pound to about 1/2-inch thickness.",
-        "两面撒盐、黑胡椒和红椒粉 / Season both sides with salt, pepper, and paprika."
-      ],
-      main: [
-        "热油每面煎3-4分钟至金黄 / Sear in hot oil 3-4 minutes per side until golden."
-      ],
-      side: [
-        "黄油与蒜片备用 / Prepare butter and sliced garlic for basting."
-      ],
-      seasoning: [
-        "转小火加黄油蒜片，煎至中心165°F / Lower heat, add butter and garlic; cook to 165°F internal temp.",
-        "静置5分钟再切片 / Rest 5 minutes before slicing."
-      ]
-    },
-    materials: {
-      "Whole Foods": [
-        "鸡胸肉 Chicken breasts (2)",
-        "黄油 Butter",
-        "蒜头 Garlic bulbs",
-        "柠檬 Lemon"
-      ],
-      Costco: [
-        "菜籽油 Canola oil",
-        "红椒粉 Paprika",
-        "黑胡椒 Black pepper"
-      ],
-      Ranch99: [
-        "海盐 Sea salt",
-        "百里香 Dried thyme"
-      ]
-    }
-  }
-];
+let DISHES = [];
+let MATERIALS = [];
 
 const dishGallery = document.getElementById("dish-gallery");
 const addDishButton = document.getElementById("add-dish");
@@ -227,6 +37,12 @@ function createFallbackImage(label) {
 }
 
 function renderDishCards() {
+  if (!DISHES || DISHES.length === 0) {
+    dishGallery.innerHTML =
+      "<p>未加载到菜品数据，请刷新页面 / No dish data loaded, please refresh.</p>";
+    return;
+  }
+
   dishGallery.innerHTML = DISHES.map(
     (dish) => `
       <article class="dish-card" data-dish="${dish.name}">
@@ -256,7 +72,11 @@ function renderDishCards() {
       activeDish = selectedDish;
       updateActiveCard();
       renderSteps(selectedDish.steps);
-      renderMaterials(materialsGrid, selectedDish.materials);
+      renderMaterials(
+        materialsGrid,
+        getMaterialsByStore(selectedDish.materialIds),
+        false
+      );
     });
   });
 }
@@ -270,7 +90,7 @@ const STEP_TITLES = {
 
 const STORE_LABELS = {
   "Whole Foods": "Whole Foods / 全食超市",
-  Costco: "Costco / 好市多",
+  Safeway: "Safeway / 西夫韦",
   Ranch99: "Ranch 99 / 大华超市"
 };
 
@@ -292,11 +112,36 @@ function renderSteps(steps) {
   stepsList.innerHTML = sections;
 }
 
-function renderMaterials(targetElement, materials) {
-  targetElement.innerHTML = Object.entries(materials)
+function getMaterialById(id) {
+  return MATERIALS.find((item) => item.id === id);
+}
+
+function getMaterialsByStore(materialIds) {
+  const grouped = {};
+  materialIds.forEach((id) => {
+    const item = getMaterialById(id);
+    if (!item) return;
+    if (!grouped[item.store]) {
+      grouped[item.store] = [];
+    }
+    grouped[item.store].push(item);
+  });
+  return grouped;
+}
+
+function formatMaterialLabel(item, showPrice = false) {
+  const base = `${item.nameCn} ${item.nameEn}`;
+  if (!showPrice) return base;
+  return `${base} ($${item.price.toFixed(2)})`;
+}
+
+function renderMaterials(targetElement, materialsByStore, showPrice = false) {
+  targetElement.innerHTML = Object.entries(materialsByStore)
     .map(([store, items]) => {
       const storeLabel = STORE_LABELS[store] || store;
-      const list = items.map((item) => `<li>${item}</li>`).join("");
+      const list = items
+        .map((item) => `<li>${formatMaterialLabel(item, showPrice)}</li>`)
+        .join("");
       return `
         <div class="store-card">
           <h4>${storeLabel}</h4>
@@ -325,29 +170,13 @@ function updateSelectedDishes() {
 }
 
 function combineMaterials() {
-  const combined = {
-    "Whole Foods": new Set(),
-    Costco: new Set(),
-    Ranch99: new Set()
-  };
-
+  const materialIds = new Set();
   dinnerSelection.forEach((dish) => {
-    Object.entries(dish.materials).forEach(([store, items]) => {
-      if (!combined[store]) {
-        combined[store] = new Set();
-      }
-      items.forEach((item) => combined[store].add(item));
-    });
+    dish.materialIds.forEach((id) => materialIds.add(id));
   });
 
-  const formatted = Object.fromEntries(
-    Object.entries(combined).map(([store, items]) => [
-      store,
-      Array.from(items)
-    ])
-  );
-
-  renderMaterials(combinedMaterialsGrid, formatted);
+  const grouped = getMaterialsByStore(Array.from(materialIds));
+  renderMaterials(combinedMaterialsGrid, grouped, true);
 }
 
 function handleAddDish() {
@@ -374,12 +203,34 @@ function handleClearDinner() {
   combinedMaterialsGrid.innerHTML = "";
 }
 
-renderDishCards();
-activeDish = DISHES[0];
-updateActiveCard();
-renderSteps(activeDish.steps);
-renderMaterials(materialsGrid, activeDish.materials);
+function loadData() {
+  const data = window.DATA || { DISHES: [], MATERIALS: [] };
+  DISHES = Array.isArray(data.DISHES) ? data.DISHES : [];
+  MATERIALS = Array.isArray(data.MATERIALS) ? data.MATERIALS : [];
+}
 
-addDishButton.addEventListener("click", handleAddDish);
-generateListButton.addEventListener("click", handleGenerateList);
-clearDinnerButton.addEventListener("click", handleClearDinner);
+function initPage() {
+  loadData();
+  renderDishCards();
+
+  if (!DISHES.length) {
+    stepsList.innerHTML = "";
+    materialsGrid.innerHTML = "";
+    return;
+  }
+
+  activeDish = DISHES[0];
+  updateActiveCard();
+  renderSteps(activeDish.steps);
+  renderMaterials(
+    materialsGrid,
+    getMaterialsByStore(activeDish.materialIds),
+    false
+  );
+
+  addDishButton.addEventListener("click", handleAddDish);
+  generateListButton.addEventListener("click", handleGenerateList);
+  clearDinnerButton.addEventListener("click", handleClearDinner);
+}
+
+window.addEventListener("DOMContentLoaded", initPage);

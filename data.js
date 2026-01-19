@@ -1,17 +1,34 @@
-function createMaterialImage(label) {
+function createMaterialImage(label, brand, store) {
   const safeLabel = label.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const safeBrand = brand.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  
+  // Color scheme by store
+  const colors = {
+    "Whole Foods": { start: "#00674f", end: "#008566", text: "#ffffff" },
+    Safeway: { start: "#e31837", end: "#c41230", text: "#ffffff" },
+    Ranch99: { start: "#d4262a", end: "#a81e21", text: "#ffffff" }
+  };
+  
+  const storeColors = colors[store] || { start: "#f5e6cf", end: "#e0c7a2", text: "#5a4a3a" };
+  
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="600" height="420">
       <defs>
-        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stop-color="#f5e6cf" />
-          <stop offset="100%" stop-color="#e0c7a2" />
+        <linearGradient id="bg-${store.replace(/\s/g, '')}" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="${storeColors.start}" />
+          <stop offset="100%" stop-color="${storeColors.end}" />
         </linearGradient>
       </defs>
-      <rect width="600" height="420" fill="url(#bg)" />
-      <rect x="40" y="40" width="520" height="340" rx="26" fill="rgba(255,255,255,0.55)" />
-      <text x="300" y="220" font-size="38" text-anchor="middle" fill="#5a4a3a" font-family="Arial, sans-serif">
+      <rect width="600" height="420" fill="url(#bg-${store.replace(/\s/g, '')})" />
+      <rect x="30" y="30" width="540" height="360" rx="20" fill="rgba(255,255,255,0.95)" />
+      <text x="300" y="160" font-size="32" font-weight="600" text-anchor="middle" fill="#2d2d2d" font-family="Arial, sans-serif">
+        ${safeBrand}
+      </text>
+      <text x="300" y="220" font-size="28" text-anchor="middle" fill="#5a4a3a" font-family="Arial, sans-serif">
         ${safeLabel}
+      </text>
+      <text x="300" y="350" font-size="18" text-anchor="middle" fill="#888" font-family="Arial, sans-serif">
+        ${store}
       </text>
     </svg>
   `.trim();
@@ -22,290 +39,362 @@ const MATERIALS = [
   {
     id: "tofu-soft",
     nameCn: "嫩豆腐",
-    nameEn: "Soft tofu",
+    nameEn: "Soft Tofu",
+    brand: "365 by Whole Foods",
     store: "Whole Foods",
     price: 3.49,
-    image: createMaterialImage("Soft tofu")
+    unit: "14 oz",
+    image: createMaterialImage("Soft Tofu", "365 by Whole Foods", "Whole Foods")
   },
   {
     id: "ground-pork",
     nameCn: "猪肉末",
-    nameEn: "Ground pork",
+    nameEn: "Ground Pork",
+    brand: "Whole Foods Market",
     store: "Whole Foods",
     price: 6.99,
-    image: createMaterialImage("Ground pork")
+    unit: "1 lb",
+    image: createMaterialImage("Ground Pork", "Whole Foods Market", "Whole Foods")
   },
   {
     id: "scallion",
     nameCn: "青葱",
-    nameEn: "Scallions",
+    nameEn: "Green Onions",
+    brand: "Organic Produce",
     store: "Whole Foods",
     price: 1.49,
-    image: createMaterialImage("Scallions")
+    unit: "1 bunch",
+    image: createMaterialImage("Green Onions", "Organic Produce", "Whole Foods")
   },
   {
     id: "garlic",
     nameCn: "蒜头",
-    nameEn: "Garlic bulbs",
+    nameEn: "Garlic",
+    brand: "Fresh Produce",
     store: "Whole Foods",
     price: 0.99,
-    image: createMaterialImage("Garlic")
+    unit: "1 bulb",
+    image: createMaterialImage("Garlic", "Fresh Produce", "Whole Foods")
   },
   {
     id: "ginger",
     nameCn: "生姜",
-    nameEn: "Fresh ginger",
+    nameEn: "Fresh Ginger",
+    brand: "Organic Produce",
     store: "Whole Foods",
     price: 1.29,
-    image: createMaterialImage("Ginger")
+    unit: "per lb",
+    image: createMaterialImage("Fresh Ginger", "Organic Produce", "Whole Foods")
   },
   {
     id: "chicken-thighs",
     nameCn: "鸡腿肉去骨",
-    nameEn: "Boneless chicken thighs",
+    nameEn: "Boneless Chicken Thighs",
+    brand: "Whole Foods Market",
     store: "Whole Foods",
     price: 8.99,
-    image: createMaterialImage("Chicken thighs")
+    unit: "per lb",
+    image: createMaterialImage("Chicken Thighs", "Whole Foods Market", "Whole Foods")
   },
   {
     id: "eggs",
     nameCn: "鸡蛋",
-    nameEn: "Eggs",
+    nameEn: "Large Eggs",
+    brand: "365 Organic",
     store: "Whole Foods",
     price: 4.99,
-    image: createMaterialImage("Eggs")
+    unit: "12 ct",
+    image: createMaterialImage("Large Eggs", "365 Organic", "Whole Foods")
   },
   {
     id: "roma-tomato",
     nameCn: "番茄",
-    nameEn: "Roma tomatoes",
+    nameEn: "Roma Tomatoes",
+    brand: "Fresh Produce",
     store: "Whole Foods",
     price: 3.59,
-    image: createMaterialImage("Tomatoes")
+    unit: "per lb",
+    image: createMaterialImage("Roma Tomatoes", "Fresh Produce", "Whole Foods")
   },
   {
     id: "ground-beef",
     nameCn: "牛肉馅",
-    nameEn: "Ground beef",
+    nameEn: "Ground Beef 85/15",
+    brand: "Whole Foods Market",
     store: "Whole Foods",
     price: 7.99,
-    image: createMaterialImage("Ground beef")
+    unit: "per lb",
+    image: createMaterialImage("Ground Beef", "Whole Foods Market", "Whole Foods")
   },
   {
     id: "parsley",
     nameCn: "欧芹",
-    nameEn: "Fresh parsley",
+    nameEn: "Fresh Parsley",
+    brand: "Organic Produce",
     store: "Whole Foods",
     price: 1.79,
-    image: createMaterialImage("Parsley")
+    unit: "1 bunch",
+    image: createMaterialImage("Fresh Parsley", "Organic Produce", "Whole Foods")
   },
   {
     id: "chicken-breast",
     nameCn: "鸡胸肉",
-    nameEn: "Chicken breasts",
+    nameEn: "Chicken Breast",
+    brand: "Whole Foods Market",
     store: "Whole Foods",
     price: 9.49,
-    image: createMaterialImage("Chicken breast")
+    unit: "per lb",
+    image: createMaterialImage("Chicken Breast", "Whole Foods Market", "Whole Foods")
   },
   {
     id: "butter",
     nameCn: "黄油",
-    nameEn: "Butter",
+    nameEn: "Unsalted Butter",
+    brand: "365 by Whole Foods",
     store: "Whole Foods",
     price: 4.29,
-    image: createMaterialImage("Butter")
+    unit: "16 oz",
+    image: createMaterialImage("Unsalted Butter", "365 by Whole Foods", "Whole Foods")
   },
   {
     id: "lemon",
     nameCn: "柠檬",
-    nameEn: "Lemon",
+    nameEn: "Lemons",
+    brand: "Fresh Produce",
     store: "Whole Foods",
     price: 0.89,
-    image: createMaterialImage("Lemon")
+    unit: "each",
+    image: createMaterialImage("Lemons", "Fresh Produce", "Whole Foods")
   },
   {
     id: "cornstarch",
     nameCn: "玉米淀粉",
     nameEn: "Cornstarch",
-    store: "Costco",
-    price: 6.49,
-    image: createMaterialImage("Cornstarch")
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "16 oz",
+    image: createMaterialImage("Cornstarch", "Signature SELECT", "Safeway")
   },
   {
     id: "chicken-broth",
     nameCn: "鸡汤",
-    nameEn: "Chicken broth carton",
-    store: "Costco",
-    price: 8.99,
-    image: createMaterialImage("Chicken broth")
+    nameEn: "Chicken Broth",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 3.49,
+    unit: "32 oz",
+    image: createMaterialImage("Chicken Broth", "Signature SELECT", "Safeway")
   },
   {
     id: "canola-oil",
     nameCn: "菜籽油",
-    nameEn: "Canola oil",
-    store: "Costco",
-    price: 12.99,
-    image: createMaterialImage("Canola oil")
+    nameEn: "Canola Oil",
+    brand: "O Organics",
+    store: "Safeway",
+    price: 7.99,
+    unit: "48 oz",
+    image: createMaterialImage("Canola Oil", "O Organics", "Safeway")
   },
   {
     id: "roasted-peanuts",
     nameCn: "烤花生",
-    nameEn: "Roasted peanuts",
-    store: "Costco",
-    price: 9.49,
-    image: createMaterialImage("Peanuts")
+    nameEn: "Dry Roasted Peanuts",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 5.99,
+    unit: "16 oz",
+    image: createMaterialImage("Roasted Peanuts", "Signature SELECT", "Safeway")
   },
   {
     id: "soy-sauce",
     nameCn: "酱油",
-    nameEn: "Soy sauce",
-    store: "Costco",
-    price: 7.49,
-    image: createMaterialImage("Soy sauce")
+    nameEn: "Soy Sauce",
+    brand: "Kikkoman",
+    store: "Safeway",
+    price: 4.49,
+    unit: "15 oz",
+    image: createMaterialImage("Soy Sauce", "Kikkoman", "Safeway")
   },
   {
     id: "sugar",
     nameCn: "白砂糖",
-    nameEn: "Granulated sugar",
-    store: "Costco",
-    price: 4.99,
-    image: createMaterialImage("Sugar")
+    nameEn: "Granulated Sugar",
+    brand: "C&H",
+    store: "Safeway",
+    price: 3.99,
+    unit: "4 lbs",
+    image: createMaterialImage("Granulated Sugar", "C&H", "Safeway")
   },
   {
     id: "tomato-paste",
     nameCn: "番茄膏",
-    nameEn: "Tomato paste",
-    store: "Costco",
-    price: 6.99,
-    image: createMaterialImage("Tomato paste")
+    nameEn: "Tomato Paste",
+    brand: "Contadina",
+    store: "Safeway",
+    price: 2.29,
+    unit: "12 oz",
+    image: createMaterialImage("Tomato Paste", "Contadina", "Safeway")
   },
   {
     id: "breadcrumbs",
     nameCn: "面包糠",
-    nameEn: "Breadcrumbs",
-    store: "Costco",
-    price: 5.49,
-    image: createMaterialImage("Breadcrumbs")
+    nameEn: "Italian Breadcrumbs",
+    brand: "Progresso",
+    store: "Safeway",
+    price: 3.99,
+    unit: "15 oz",
+    image: createMaterialImage("Breadcrumbs", "Progresso", "Safeway")
   },
   {
     id: "olive-oil",
     nameCn: "橄榄油",
-    nameEn: "Olive oil",
-    store: "Costco",
-    price: 15.99,
-    image: createMaterialImage("Olive oil")
+    nameEn: "Extra Virgin Olive Oil",
+    brand: "O Organics",
+    store: "Safeway",
+    price: 12.99,
+    unit: "25.5 oz",
+    image: createMaterialImage("Olive Oil", "O Organics", "Safeway")
   },
   {
     id: "paprika",
     nameCn: "红椒粉",
     nameEn: "Paprika",
-    store: "Costco",
-    price: 5.99,
-    image: createMaterialImage("Paprika")
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 2.99,
+    unit: "2.12 oz",
+    image: createMaterialImage("Paprika", "Signature SELECT", "Safeway")
   },
   {
     id: "black-pepper",
     nameCn: "黑胡椒",
-    nameEn: "Black pepper",
-    store: "Costco",
-    price: 6.99,
-    image: createMaterialImage("Black pepper")
+    nameEn: "Black Pepper",
+    brand: "Signature SELECT",
+    store: "Safeway",
+    price: 4.49,
+    unit: "4 oz",
+    image: createMaterialImage("Black Pepper", "Signature SELECT", "Safeway")
   },
   {
     id: "doubanjiang",
     nameCn: "郫县豆瓣酱",
-    nameEn: "Doubanjiang",
+    nameEn: "Pixian Doubanjiang",
+    brand: "Juancheng",
     store: "Ranch99",
-    price: 3.99,
-    image: createMaterialImage("Doubanjiang")
+    price: 4.99,
+    unit: "16 oz",
+    image: createMaterialImage("Doubanjiang", "Juancheng", "Ranch99")
   },
   {
     id: "sichuan-pepper",
     nameCn: "花椒",
-    nameEn: "Sichuan peppercorns",
+    nameEn: "Sichuan Peppercorns",
+    brand: "Mala Market",
     store: "Ranch99",
-    price: 4.59,
-    image: createMaterialImage("Sichuan pepper")
+    price: 5.99,
+    unit: "2 oz",
+    image: createMaterialImage("Sichuan Peppercorns", "Mala Market", "Ranch99")
   },
   {
     id: "chili-oil",
     nameCn: "红油",
-    nameEn: "Chili oil",
+    nameEn: "Chili Oil",
+    brand: "Lao Gan Ma",
     store: "Ranch99",
-    price: 5.99,
-    image: createMaterialImage("Chili oil")
+    price: 3.99,
+    unit: "7.41 oz",
+    image: createMaterialImage("Chili Oil", "Lao Gan Ma", "Ranch99")
   },
   {
     id: "dried-chilies",
     nameCn: "干辣椒",
-    nameEn: "Dried chilies",
+    nameEn: "Dried Red Chilies",
+    brand: "Sichuan Brand",
     store: "Ranch99",
-    price: 2.99,
-    image: createMaterialImage("Dried chilies")
+    price: 3.49,
+    unit: "4 oz",
+    image: createMaterialImage("Dried Chilies", "Sichuan Brand", "Ranch99")
   },
   {
     id: "black-vinegar",
     nameCn: "陈醋",
-    nameEn: "Chinese black vinegar",
+    nameEn: "Chinkiang Vinegar",
+    brand: "Gold Plum",
     store: "Ranch99",
-    price: 3.79,
-    image: createMaterialImage("Black vinegar")
+    price: 4.29,
+    unit: "18.6 oz",
+    image: createMaterialImage("Black Vinegar", "Gold Plum", "Ranch99")
   },
   {
     id: "shaoxing",
     nameCn: "绍兴料酒",
-    nameEn: "Shaoxing rice wine",
+    nameEn: "Shaoxing Cooking Wine",
+    brand: "Pagoda",
     store: "Ranch99",
-    price: 4.49,
-    image: createMaterialImage("Shaoxing wine")
+    price: 5.49,
+    unit: "25.4 oz",
+    image: createMaterialImage("Shaoxing Wine", "Pagoda", "Ranch99")
   },
   {
     id: "white-pepper",
     nameCn: "白胡椒粉",
-    nameEn: "White pepper",
+    nameEn: "White Pepper Powder",
+    brand: "Spice King",
     store: "Ranch99",
-    price: 3.59,
-    image: createMaterialImage("White pepper")
+    price: 3.99,
+    unit: "4 oz",
+    image: createMaterialImage("White Pepper", "Spice King", "Ranch99")
   },
   {
     id: "light-soy",
     nameCn: "生抽",
-    nameEn: "Light soy sauce",
+    nameEn: "Light Soy Sauce",
+    brand: "Lee Kum Kee",
     store: "Ranch99",
-    price: 2.99,
-    image: createMaterialImage("Light soy sauce")
+    price: 3.49,
+    unit: "16.9 oz",
+    image: createMaterialImage("Light Soy Sauce", "Lee Kum Kee", "Ranch99")
   },
   {
     id: "oregano",
     nameCn: "牛至",
-    nameEn: "Dried oregano",
+    nameEn: "Dried Oregano",
+    brand: "McCormick",
     store: "Ranch99",
-    price: 2.49,
-    image: createMaterialImage("Oregano")
+    price: 4.99,
+    unit: "3 oz",
+    image: createMaterialImage("Oregano", "McCormick", "Ranch99")
   },
   {
     id: "chili-flakes",
     nameCn: "辣椒碎",
-    nameEn: "Chili flakes",
+    nameEn: "Crushed Red Pepper",
+    brand: "Dynasty",
     store: "Ranch99",
-    price: 2.49,
-    image: createMaterialImage("Chili flakes")
+    price: 2.99,
+    unit: "1 oz",
+    image: createMaterialImage("Chili Flakes", "Dynasty", "Ranch99")
   },
   {
     id: "sea-salt",
     nameCn: "海盐",
-    nameEn: "Sea salt",
+    nameEn: "Sea Salt",
+    brand: "Diamond Crystal",
     store: "Ranch99",
-    price: 1.99,
-    image: createMaterialImage("Sea salt")
+    price: 3.49,
+    unit: "26 oz",
+    image: createMaterialImage("Sea Salt", "Diamond Crystal", "Ranch99")
   },
   {
     id: "thyme",
     nameCn: "百里香",
-    nameEn: "Dried thyme",
+    nameEn: "Dried Thyme",
+    brand: "Spice Islands",
     store: "Ranch99",
-    price: 2.59,
-    image: createMaterialImage("Thyme")
+    price: 4.49,
+    unit: "0.7 oz",
+    image: createMaterialImage("Thyme", "Spice Islands", "Ranch99")
   }
 ];
 
