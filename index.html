@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yuan & Yuan Dish</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <nav class="top-nav">
+          <a class="nav-link active" href="index.html">菜谱主页 / Dishes</a>
+          <a class="nav-link" href="materials.html">材料管理 / Materials</a>
+        </nav>
+        <h1>Yuan & Yuan Dish / 袁与袁家常菜</h1>
+        <p>选菜、查看步骤、生成合并购物清单 / Pick dishes, view steps, and build a combined grocery list.</p>
+      </header>
+
+      <section class="card">
+        <h2>1) 选择菜品 / Choose a dish</h2>
+        <p class="helper">点击图片预览步骤与材料 / Click a photo to preview steps and ingredients.</p>
+        <div id="dish-gallery" class="dish-gallery"></div>
+        <div class="primary-actions">
+          <button id="add-dish" type="button">加入晚餐 / Add to dinner</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2) 关键步骤 / Key steps</h2>
+        <ol id="dish-steps" class="steps"></ol>
+      </section>
+
+      <section class="card">
+        <h2>3) 按超市分类的材料 / Materials by store</h2>
+        <div class="store-grid" id="dish-materials"></div>
+      </section>
+
+      <section class="card">
+        <h2>4) 晚餐规划 / Big dinner plan</h2>
+        <div class="dinner-actions">
+          <button id="generate-list" type="button">生成合并清单 / Generate combined list</button>
+          <button id="clear-dinner" type="button">清空晚餐 / Clear dinner</button>
+        </div>
+        <div class="dinner-layout">
+          <div>
+            <h3>已选菜品 / Selected dishes</h3>
+            <ul id="selected-dishes" class="chip-list"></ul>
+          </div>
+          <div>
+            <h3>合并购物清单 / Combined grocery list</h3>
+            <div class="store-grid" id="combined-materials"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
