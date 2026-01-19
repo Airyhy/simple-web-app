@@ -248,24 +248,112 @@ button#view-dish {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
 
+.attribution {
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  border-top: 2px solid rgba(214, 185, 143, 0.3);
+  background: rgba(255, 250, 242, 0.5);
+  border-radius: 16px;
+}
+
+.attribution p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7a6f62;
+  line-height: 1.6;
+}
+
+.attribution a {
+  color: #8b6f47;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.attribution a:hover {
+  color: #5a4a3a;
+  text-decoration: underline;
+}
+
 .materials-filter {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   align-items: flex-start;
 }
 
 .materials-filter label {
   font-weight: 600;
   color: #5a4a3a;
+  font-size: 0.9rem;
 }
 
-.materials-filter select {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(214, 185, 143, 0.6);
+.store-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.store-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 24px;
+  border: 2px solid rgba(214, 185, 143, 0.5);
   background: #fffaf2;
-  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  color: #5a4a3a;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.store-button:hover {
+  border-color: rgba(139, 111, 71, 0.8);
+  background: rgba(255, 250, 242, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 70, 40, 0.15);
+}
+
+.store-button:active {
+  transform: translateY(0);
+}
+
+.store-button.active {
+  background: linear-gradient(135deg, #8b6f47 0%, #a68456 100%);
+  color: white;
+  border-color: #8b6f47;
+  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+}
+
+.store-button.active svg circle,
+.store-button.active svg rect {
+  filter: brightness(1.2);
+}
+
+.store-button-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.store-button-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .store-buttons {
+    width: 100%;
+  }
+  
+  .store-button {
+    flex: 1;
+    min-width: 45%;
+    justify-content: center;
+  }
 }
 
 .materials-grid {
@@ -306,6 +394,11 @@ button#view-dish {
   border-width: 4px;
 }
 
+.material-card[data-store="Trader Joe's"] {
+  border-color: #007A87;
+  border-width: 4px;
+}
+
 /* Store badge with logo/text */
 .material-card::after {
   content: '';
@@ -333,6 +426,10 @@ button#view-dish {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><rect width="50" height="50" rx="25" fill="%23ff9500"/><text x="25" y="32" font-size="14" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">99</text></svg>');
 }
 
+.material-card[data-store="Trader Joe's"]::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><circle cx="25" cy="25" r="24" fill="%23007A87"/><text x="25" y="32" font-size="14" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">TJ</text></svg>');
+}
+
 .material-card img {
   width: 100%;
   height: 160px;
@@ -352,6 +449,10 @@ button#view-dish {
 
 .material-card[data-store="Ranch99"] img {
   border-bottom: 4px solid #ff9500;
+}
+
+.material-card[data-store="Trader Joe's"] img {
+  border-bottom: 4px solid #007A87;
 }
 
 .material-body {
@@ -392,6 +493,11 @@ button#view-dish {
 .material-card[data-store="Ranch99"] .material-store {
   color: #ff9500;
   background: rgba(255, 149, 0, 0.1);
+}
+
+.material-card[data-store="Trader Joe's"] .material-store {
+  color: #007A87;
+  background: rgba(0, 122, 135, 0.1);
 }
 
 .material-brand {

@@ -91,7 +91,8 @@ const STEP_TITLES = {
 const STORE_LABELS = {
   "Whole Foods": "Whole Foods / 全食超市",
   Safeway: "Safeway / 西夫韦",
-  Ranch99: "Ranch 99 / 大华超市"
+  Ranch99: "Ranch 99 / 大华超市",
+  "Trader Joe's": "Trader Joe's / 乔氏超市"
 };
 
 const STORE_COLORS = {

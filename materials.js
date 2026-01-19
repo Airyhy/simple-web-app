@@ -1,6 +1,7 @@
 function initPage() {
   const materialsGrid = document.getElementById("materials-grid");
   const storeFilter = document.getElementById("store-filter");
+  const storeButtons = storeFilter.querySelectorAll(".store-button");
 
   const DATA = window.DATA || { MATERIALS: [] };
   const { MATERIALS } = DATA;
@@ -13,6 +14,8 @@ function initPage() {
     Ranch99: "Ranch 99 / 大华超市"
   };
 
+  let currentStore = "all";
+
   function formatPrice(price) {
     return `$${price.toFixed(2)}`;
   }
@@ -24,9 +27,9 @@ function initPage() {
       return;
     }
 
-  materialsGrid.innerHTML = items
-    .map(
-      (item) => `
+    materialsGrid.innerHTML = items
+      .map(
+        (item) => `
         <article class="material-card" data-store="${item.store}">
           <img src="${item.image}" alt="${item.nameEn}" />
           <div class="material-body">
@@ -37,20 +40,35 @@ function initPage() {
           </div>
         </article>
       `
-    )
-    .join("");
+      )
+      .join("");
   }
 
-  function applyFilter() {
-    const value = storeFilter.value;
+  function applyFilter(store) {
+    currentStore = store;
     const filtered =
-      value === "all"
+      store === "all"
         ? MATERIALS
-        : MATERIALS.filter((item) => item.store === value);
+        : MATERIALS.filter((item) => item.store === store);
     renderMaterialsGrid(filtered);
+
+    // Update active button
+    storeButtons.forEach(btn => {
+      if (btn.dataset.store === store) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
   }
 
-  storeFilter.addEventListener("change", applyFilter);
+  // Add click handlers to buttons
+  storeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const store = button.dataset.store;
+      applyFilter(store);
+    });
+  });
 
   renderMaterialsGrid(MATERIALS);
 }

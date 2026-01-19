@@ -48,25 +48,68 @@
                 </svg>
                 Ranch 99 / 大华超市
               </span>
+              <span class="legend-item">
+                <svg width="24" height="24" style="flex-shrink: 0;">
+                  <circle cx="12" cy="12" r="11" fill="#007A87"/>
+                  <text x="12" y="17" font-size="10" font-weight="700" fill="white" text-anchor="middle" font-family="Arial, sans-serif">TJ</text>
+                </svg>
+                Trader Joe's / 乔氏超市
+              </span>
             </div>
           </div>
           <div class="materials-filter">
-            <label for="store-filter">门店 / Store</label>
-            <select id="store-filter">
-              <option value="all">全部 / All</option>
-              <option value="Whole Foods">Whole Foods / 全食超市</option>
-              <option value="Safeway">Safeway / 西夫韦</option>
-              <option value="Ranch99">Ranch 99 / 大华超市</option>
-            </select>
+            <label>门店 / Store</label>
+            <div class="store-buttons" id="store-filter">
+              <button class="store-button active" data-store="all">
+                <span class="store-button-icon">🏪</span>
+                <span class="store-button-text">全部 / All</span>
+              </button>
+              <button class="store-button" data-store="Whole Foods">
+                <svg width="20" height="20" style="flex-shrink: 0;">
+                  <circle cx="10" cy="10" r="9" fill="#00674f"/>
+                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">WF</text>
+                </svg>
+                <span class="store-button-text">Whole Foods</span>
+              </button>
+              <button class="store-button" data-store="Safeway">
+                <svg width="20" height="20" style="flex-shrink: 0;">
+                  <circle cx="10" cy="10" r="9" fill="#e31837"/>
+                  <text x="10" y="14" font-size="10" font-weight="700" fill="white" text-anchor="middle">S</text>
+                </svg>
+                <span class="store-button-text">Safeway</span>
+              </button>
+              <button class="store-button" data-store="Ranch99">
+                <svg width="20" height="20" style="flex-shrink: 0;">
+                  <rect width="20" height="20" rx="10" fill="#ff9500"/>
+                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">99</text>
+                </svg>
+                <span class="store-button-text">Ranch 99</span>
+              </button>
+              <button class="store-button" data-store="Trader Joe's">
+                <svg width="20" height="20" style="flex-shrink: 0;">
+                  <circle cx="10" cy="10" r="9" fill="#007A87"/>
+                  <text x="10" y="14" font-size="8" font-weight="700" fill="white" text-anchor="middle">TJ</text>
+                </svg>
+                <span class="store-button-text">Trader Joe's</span>
+              </button>
+            </div>
           </div>
         </div>
         <div id="materials-grid" class="materials-grid"></div>
       </section>
+
+      <footer class="attribution">
+        <p>
+          📦 Product data powered by <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> 
+          · Licensed under <a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank" rel="noopener">ODbL</a>
+          · A free and open database of food products from around the world
+        </p>
+      </footer>
     </main>
 
     <script>
       // Pre-check before loading
-      console.log('Page loaded, about to load scripts');
+      console.log('Page loaded, about to load scripts from store databases');
       window.addEventListener('error', function(e) {
         console.error('Global error:', e.error, e.message, e.filename, e.lineno);
         const grid = document.getElementById('materials-grid');
@@ -75,10 +118,25 @@
         }
       });
     </script>
+    <!-- Load store data files (simulating 4 separate database tables) -->
+    <script src="wholefoods-data.js"></script>
+    <script src="safeway-data.js"></script>
+    <script src="ranch99-data.js"></script>
+    <script src="traderjoes-data.js"></script>
     <script src="data.js"></script>
     <script>
-      console.log('data.js loaded, window.DATA =', window.DATA);
-      console.log('MATERIALS count:', window.DATA?.MATERIALS?.length);
+      // Merge materials from all stores into main DATA object
+      if (typeof WHOLEFOODS_MATERIALS !== 'undefined' && window.DATA) {
+        window.DATA.MATERIALS = [
+          ...WHOLEFOODS_MATERIALS,
+          ...SAFEWAY_MATERIALS,
+          ...RANCH99_MATERIALS,
+          ...TRADERJOES_MATERIALS
+        ];
+        console.log('✓ Loaded materials from 4 store databases:', window.DATA.MATERIALS.length);
+      }
+      
+      // Validate data load
       if (!window.DATA || !window.DATA.MATERIALS || window.DATA.MATERIALS.length === 0) {
         console.error('DATA not loaded correctly!');
         document.getElementById('materials-grid').innerHTML = 
