@@ -60,7 +60,7 @@
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -394,10 +394,11 @@
   background: #d0d0d0;
 }
 
-/* Mobile responsive */
+/* Mobile responsive - Fix for scrolling issue */
 @media (max-width: 768px) {
   .dish-detail-modal {
     padding: 0;
+    align-items: stretch;
   }
 
   .dish-detail-content {
@@ -405,14 +406,27 @@
     border-radius: 0;
     max-width: 100%;
     height: 100vh;
+    /* Use flexbox to allow body to scroll independently */
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+  }
+  
+  .dish-detail-body {
+    padding: 24px;
+    padding-bottom: 120px; /* Extra space for sticky buttons */
+    overflow-y: auto;
+    flex: 1;
+    -webkit-overflow-scrolling: touch;
   }
 
   .dish-detail-hero {
     height: 250px;
+    flex-shrink: 0;
   }
-
-  .dish-detail-body {
-    padding: 24px;
+  
+  .dish-detail-close {
+    top: calc(20px + env(safe-area-inset-top));
   }
 
   .dish-detail-title {
@@ -436,6 +450,14 @@
   .dish-detail-actions {
     flex-direction: column;
     gap: 12px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 16px 24px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    margin: 0 -24px -24px -24px;
+    border-top: 2px solid #f0f0f0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
   }
   
   .dish-detail-actions button {
