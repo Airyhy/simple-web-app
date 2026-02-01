@@ -1,0 +1,67 @@
+/* Made Dinners Page Styles */
+
+.dinner-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.dinner-date-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.dinner-date {
+    font-size: 1.3rem;
+    color: #2c5f2d;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.dinner-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.dinner-card {
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.25rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.dinner-card:hover {
+    border-color: #2c5f2d;
+    box-shadow: 0 2px 8px rgba(44,95,45,0.1);
+    transform: translateY(-2px);
+}
+
+.dinner-card h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.dinner-time {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .dinner-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .dinner-date-section {
+        padding: 1rem;
+    }
+}

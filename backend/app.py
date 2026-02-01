@@ -34,6 +34,18 @@ def create_app():
         from flask import render_template
         return render_template('index.html')
     
+    @app.route('/materials')
+    def serve_materials():
+        """Serve the materials management page"""
+        from flask import render_template
+        return render_template('materials.html')
+    
+    @app.route('/dinners')
+    def serve_dinners():
+        """Serve the made dinners page"""
+        from flask import render_template
+        return render_template('dinners.html')
+    
     @app.route('/api/materials', methods=['GET'])
     def get_materials():
         """Get all materials, optionally filtered by store"""

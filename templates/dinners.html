@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made Dinners - Meal Yuan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/dinners.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="header-content">
+            <nav class="top-nav">
+                <a class="nav-link" href="/">菜谱主页 / Dishes</a>
+                <a class="nav-link" href="/materials">材料管理 / Materials</a>
+                <a class="nav-link active" href="/dinners">完成的晚餐 / Made Dinners</a>
+            </nav>
+            <h1>Meal Yuan / 袁与袁家常菜</h1>
+            <p class="tagline">Our culinary journey / 我们的烹饪旅程</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>完成的晚餐 / Made Dinners</h2>
+            <p class="helper">Record our memorable meals / 记录我们的美食时刻</p>
+            
+            <div id="dinner-gallery" class="dinner-gallery">
+                <!-- Dinners will be loaded here -->
+                <p style="text-align: center; color: #999; padding: 40px;">
+                    No dinners recorded yet / 还没有记录晚餐<br>
+                    <small>Save your dinner plans from the main page / 从主页保存晚餐计划</small>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <span class="toast-icon">✅</span>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="/static/dinners.js"></script>
+</body>
+</html>

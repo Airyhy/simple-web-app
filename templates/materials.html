@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials - Meal Yuan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/materials.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="header-content">
+            <nav class="top-nav">
+                <a class="nav-link" href="/">菜谱主页 / Dishes</a>
+                <a class="nav-link active" href="/materials">材料管理 / Materials</a>
+                <a class="nav-link" href="/dinners">完成的晚餐 / Made Dinners</a>
+            </nav>
+            <h1>Meal Yuan / 袁与袁家常菜</h1>
+            <p class="tagline">Manage materials, prices, and store locations / 统一管理材料价格与门店信息</p>
+        </div>
+    </header>
+
+    <main class="materials-page">
+        <div class="materials-container">
+            <!-- Left Sidebar -->
+            <aside class="materials-sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-section-header">
+                        <span>STORE FILTER</span>
+                    </div>
+                    <div class="store-links" id="store-filter">
+                        <button class="store-link active" data-store="all">
+                            <span>All Stores</span>
+                            <span class="count" id="count-all">0</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="materials-content">
+                <div class="materials-header">
+                    <h2>Materials / 材料</h2>
+                    <div class="materials-stats">
+                        <span id="total-materials">0 items</span>
+                        <span id="total-price">Total: $0.00</span>
+                    </div>
+                </div>
+
+                <div id="materials-grid" class="materials-grid">
+                    <!-- Materials will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <span class="toast-icon">✅</span>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="/static/materials.js"></script>
+</body>
+</html>
