@@ -228,5 +228,11 @@ if __name__ == '__main__':
         db.create_all()
         print("✅ Database tables created")
     
-    print("🚀 Starting Flask server on http://localhost:5000")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Get port from environment variable (for deployment) or default to 5000
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    host = os.environ.get('HOST', '0.0.0.0')
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    print(f"🚀 Starting Flask server on {host}:{port}")
+    app.run(debug=debug, host=host, port=port)

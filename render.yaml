@@ -1,0 +1,8 @@
+# Render Deployment Configuration
+# This file tells Render how to build and run your Python Flask app
+
+# Build Command
+build = "pip install -r requirements.txt && cd backend && python init_db_simple.py"
+
+# Start Command
+start = "cd backend && gunicorn app:app"
